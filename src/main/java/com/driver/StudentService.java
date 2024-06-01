@@ -12,15 +12,15 @@ public class StudentService {
     StudentRepository studentRepository;
 
     public void addStudent(Student student){
-        studentRepository.saveStudent(student);
+        studentRepository.addStudent(student);
     }
 
     public void addTeacher(Teacher teacher){
-        studentRepository.saveTeacher(teacher);
+        studentRepository.addTeacher(teacher);
     }
 
-    public void createStudentTeacherPair(String student, String teacher){
-        studentRepository.saveStudentTeacherPair(student, teacher);
+    public void addStudentTeacherPair(String student, String teacher){
+        studentRepository.addStudentTeacherPair(student, teacher);
     }
 
     public Student findStudent(String studentName){
@@ -31,12 +31,12 @@ public class StudentService {
         return studentRepository.findTeacher(teacherName);
     }
 
-    public List<String> findStudentsFromTeacher(String teacher){
-        return studentRepository.findStudentsFromTeacher(teacher);
+    public List<String> listOfStudents(String teacher){
+        return studentRepository.listOfStudents(teacher);
     }
 
-    public List<String> findAllStudents(){
-        return studentRepository.findAllStudents();
+    public List<String> getAllStudents(){
+        return studentRepository.getAllStudents();
     }
 
     public void deleteTeacher(String teacher){
