@@ -19,24 +19,29 @@ public class StudentRepository {
 
     public void saveStudent(Student student){
         // your code goes here
+        studentMap.put(student.getName(),student);
     }
 
     public void saveTeacher(Teacher teacher){
         // your code goes here
+        teacherMap.put(techer.getName(), teacher);
     }
 
     public void saveStudentTeacherPair(String student, String teacher){
         if(studentMap.containsKey(student) && teacherMap.containsKey(teacher)){
             // your code goes here
+            
         }
     }
 
     public Student findStudent(String student){
         // your code goes here
+        return studentMap.get(student);
     }
 
     public Teacher findTeacher(String teacher){
         // your code goes here
+        return teacherMap.get(teacher);
     }
 
     public List<String> findStudentsFromTeacher(String teacher){
