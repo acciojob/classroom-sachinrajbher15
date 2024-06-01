@@ -54,7 +54,7 @@ public class StudentRepository {
     public List<String> listOfStudents(String teacher){
         // your code goes here
         // find student list corresponding to a teacher
-        List<String> studentList = new ArrayList<>();
+        List<String> studentList = new ArrayList<String>();
         if(teacherStudentMapping.containsKey(teacher)){
             studentList = teacherStudentMapping.get(teacher);
         }
